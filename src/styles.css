@@ -1,5 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("./icons.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  button {
+    @apply inline-flex gap-1 cursor-pointer disabled:cursor-default px-[calc(1.25rem-1px)] py-[calc(.75rem-1px)] border border-transparent rounded
+    
+    text-primary-100 bg-white border-general-50
+    hover:bg-general-30
+    active:bg-white
+    disabled:bg-general-90 disabled:border-general-50 
+    focus:bg-white;
+  }
+
+  .button-medium {
+    @apply inline-flex gap-1 cursor-pointer disabled:cursor-default px-[calc(1.25rem-1px)] py-[calc(.5rem-1px)] border border-transparent rounded
+  }
+
+  .button-small {
+    @apply text-sm leading-5 inline-flex gap-1 cursor-pointer disabled:cursor-default px-[calc(1.25rem-1px)] py-[calc(.475rem-1px)] border border-transparent rounded
+  }
+
+  .icon-button {
+    @apply p-[calc(.75rem-1px)];
+  }
+
+  .icon-button.button-medium {
+    @apply p-[calc(.5rem-1px)];
+  }
+
+  .icon-button.button-small {
+    @apply p-[calc(.475rem-1px)];
+  }
+
+  .button-primary {
+    @apply text-white bg-primary-100 border-primary-100 
+      hover:bg-primary-90 hover:border-primary-90 
+      active:bg-secondary-90 active:border-secondary-90
+      disabled:bg-general-50 disabled:border-general-50 
+      focus:bg-primary-100 focus:border-primary-100;
+  }
+
+  .button-secondary {
+    @apply text-primary-100 bg-primary-40 border-primary-40 
+        hover:bg-primary-30 hover:border-primary-30 
+        active:bg-secondary-40 active:border-secondary-40
+        disabled:bg-general-50 disabled:border-general-50 
+        focus:bg-primary-100 focus:border-primary-100;
+  }
+
+  .button-destructive {
+    @apply text-white bg-red-100 border-red-100
+      hover:bg-red-80 hover:border-red-80 
+      active:bg-red-90 active:border-red-90
+      disabled:bg-general-50 disabled:border-general-50 
+      focus:bg-red-100 focus:border-red-100;
+  }
+
+  .button-destructive-secondary {
+    @apply text-red-100 bg-red-30 border-red-30 
+        hover:bg-red-40 hover:border-red-40 
+        active:bg-red-30 active:border-red-30
+        disabled:bg-general-50 disabled:border-general-50 
+        focus:bg-red-30 focus:border-red-30;
+  }
+}
