@@ -17,6 +17,8 @@ module.exports = {
       "display-6": ["1.25rem", { lineHeight: "1.75rem" }],
     },
     colors: {
+      transparent: "transparent",
+      white: "#FFFFFF",
       general: {
         30: "#F5F6FA",
         40: "#E6E9F4",
