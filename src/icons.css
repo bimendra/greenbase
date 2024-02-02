@@ -39,3 +39,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.button-small .icon {
+  width: 20px;
+  height: 20px;
+}
