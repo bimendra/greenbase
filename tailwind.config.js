@@ -19,7 +19,16 @@ module.exports = {
     colors: {
       transparent: "transparent",
       white: "#FFFFFF",
-      general: {
+      primary: "#1E5EFF",
+      primaryTint: "#D9E4FF",
+      destructive: "#F0142F",
+      destructiveTint: "#FDE7EA",
+      disabled: "",
+      main: "#131523",
+      muted: "#5A607F",
+      border: "#979797",
+      background: "#F5F6FA",
+      grey: {
         30: "#F5F6FA",
         40: "#E6E9F4",
         50: "#D7DBEC",
@@ -29,7 +38,7 @@ module.exports = {
         90: "#333752",
         100: "#131523",
       },
-      primary: {
+      blue: {
         30: "#ECF2FF",
         40: "#D9E4FF",
         50: "#B6CBFF",
@@ -39,7 +48,7 @@ module.exports = {
         90: "#336DFF",
         100: "#1E5EFF",
       },
-      secondary: {
+      purple: {
         30: "#ECF2FF",
         40: "#D9E4FF",
         50: "#B6CBFF",
