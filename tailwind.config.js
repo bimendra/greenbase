@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require("./src/greenbase-colors");
+
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
@@ -20,13 +23,25 @@ module.exports = {
       transparent: "transparent",
       white: "#FFFFFF",
       primary: "#1E5EFF",
-      primaryTint: "#D9E4FF",
+      ["primary-hover"]: "#4F81FF",
+      ["primary-active"]: "#336DFF",
+      ["primary-focus"]: "#1E5EFF",
+      secondary: "#D9E4FF",
+      ["secondary-hover"]: "#ECF2FF",
+      ["secondary-active"]: "#D9E4FF",
+      ["secondary-focus"]: "#D9E4FF",
       destructive: "#F0142F",
-      destructiveTint: "#FDE7EA",
-      disabled: "",
+      ["destructive-hover"]: "#F34359",
+      ["destructive-active"]: "#F12B43",
+      ["destructive-focus"]: "#F0142F",
+      ["destructive-secondary"]: "#FDE7EA",
+      ["destructive-secondary-hover"]: "#FCD5D9",
+      ["destructive-secondary-active"]: "#FDE7EA",
+      ["destructive-secondary-focus"]: "#FDE7EA",
+      disabled: "#D7DBEC",
       main: "#131523",
       muted: "#5A607F",
-      border: "#979797",
+      ["border-default"]: "#D7DBEC",
       background: "#F5F6FA",
       grey: {
         30: "#F5F6FA",
@@ -105,7 +120,60 @@ module.exports = {
       7: "1.75rem",
       8: "2rem",
     },
-    extend: {},
+    extend: {
+      textColor: {
+        skin: {
+          base: "var(--color-text-base)",
+          muted: "var(--color-text-muted)",
+          inverted: "var(--color-text-inverted)",
+          primary: "var(--color-primary)",
+          success: "var(--color-success)",
+          destructive: "var(--color-destructive)",
+        },
+      },
+      backgroundColor: {
+        skin: {
+          primary: "var(--color-primary)",
+          success: "var(--color-success)",
+          destructive: "var(--color-destructive)",
+          secondary: "var(--color-primary-muted)",
+          "success-secondary": "var(--color-success-muted)",
+          "destructive-secondary": "var(--color-destructive-muted)",
+          disabled: "var(--color-disabled)",
+        },
+      },
+      borderColor: {
+        skin: {
+          border: "var(--color-border)",
+          "border-primary": "var(--color-primary)",
+          "border-destructive": "var(--color-destructive)",
+          "border-success": "var(--color-success)",
+          disabled: "var(--color-disabled)",
+        },
+      },
+      colors: {
+        skin: {
+          "primary-hover": "var(--color-hover-primary)",
+          "secondary-hover": "var(--color-hover-secondary)",
+          "default-hover": "var(--color-hover-default)",
+          "destructive-hover": "var(--color-hover-destructive)",
+          "destructive-secondary-hover":
+            "var(--color-hover-destructive-secondary)",
+          "primary-active": "var(--color-active-primary)",
+          "secondary-active": "var(--color-active-secondary)",
+          "default-active": "var(--color-active-default)",
+          "destructive-active": "var(--color-active-destructive)",
+          "destructive-secondary-active":
+            "var(--color-active-destructive-secondary)",
+          "primary-focus": "var(--color-focus-primary)",
+          "secondary-focus": "var(--color-focus-secondary)",
+          "default-focus": "var(--color-focus-default)",
+          "destructive-focus": "var(--color-focus-destructive)",
+          "destructive-secondary-focus":
+            "var(--color-focus-destructive-secondary)",
+        },
+      },
+    },
   },
   plugins: [],
 };
